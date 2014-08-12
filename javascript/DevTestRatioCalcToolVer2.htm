@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Developer:Tester Ratio Calculation Tool</title>
+    
+    <script type="text/javascript" src="devTestRatioCalcScript.js"></script>
+    
+    <style type="text/css">
+       body { font-family:Tahoma; font-size:11px; }
+       h2 { background-color:black; font-size: 12px; color: #FFFFFF; }
+       h3 { background-color:black; font-size: 20px; color: #FFFFFF; vertical-align:middle; margin-bottom: 0px;}
+       .infopoint { color:Maroon; }
+       .footer { font-size:9px; }
+    </style>
+    
+</head>
+<body>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color:white; height: 60px;">
+<tr>
+<td><h3>Developer:Tester Ratio Calculation Tool</h3></td>
+</tr>
+</table>
+
+<p>
+This calculation tool should be used in conjunction with the paper "Assessing the Developer:Tester Ratio".</p>
+
+<!-- Calculate the (a) Developer: side of the equation -->
+<h2>A) Development TEAM size required and SCOPE of development possible</h2>
+
+Firstly we need to work out what the total amount of development time needed will be:
+<form name="DevTestRatioForm">
+<table cellpadding="0" cellspacing="0" style="width: 780px">
+    <tr>
+        <td class="style13">
+((
+<input type="text" name="dtr_FuncScope" value="Functional Scope" /> + 
+        </td>
+        <td class="style11">
+            Functional Complexity<input type="text" name="dtr_FuncComp" value="Functional Complexity" /> 
+            )
+        </td>
+        <td class="style12">
+            ÷
+<input type="text" name="dtr_DevComp" value="Developer Competency" /> ) =</td>
+        <td class="style4">
+<input type="text" name="dtr_DevTime" value="Total Development Time" 
+                style="background-color: #C0C0C0; width: 148px; margin-top: 0px;" 
+                readonly="readonly" /></td>
+    </tr>
+</table>
+<br />
+<input type="button" name="CalcDevEffort" value="Calculate" onclick="dtr_CalcDevEffort()" />
+<br /><br />
+
+Then get the figure for the duration given a certain number of developers:<br />
+<input type="text" name="dtr_DevTime2" value="Total Development Time" /> &#247; 
+<input type="text" name="dtr_DevNumbers" value="(a) Number of Developers" /> =
+<input type="text" name="dtr_DevDur" value="Development Duration" style="background-color: #C0C0C0" readonly="readonly" /><br />
+<br />
+<input type="button" name="CalcDevDur" value="Calculate" onclick="dtr_CalcDevDuration()" /><br /><br />
+
+<i class="infopoint">&rarr; With this we also have one half of our “<b>(a) Developer</b> : (b) Tester” ratio.</i>
+
+<!-- Calculate the :Tester side of the ratio -->
+<h2>B) Test TEAM size required and SCOPE of testing possible</h2>
+
+((
+<input type="text" name="dtr_TestScope" value="Testing Scope" /> + 
+<input type="text" name="dtr_TestCompl" value="Testing Complexity" />) &#247; 
+<input type="text" name="dtr_TestComp" value="Tester Competency" />) =
+<input type="text" name="dtr_TestTime" value="Total Test Time" style="background-color: #C0C0C0" readonly="readonly" /><br />
+<br />
+<input type="button" name="CalcTestTeam" value="Calculate" onclick="dtr_CalcTestEffort()" /><br /><br />
+
+Then get the figure for the duration of testing given a certain number of tester:<br /><br />
+<input type="text" name="dtr_TestTime2" value="Total Test Time" /> &#247; 
+<input type="text" name="dtr_TesterNumbers" value="(b) Number of Testers" /> = 
+<input type="text" name="dtr_TestDur" value="Test Duration" style="background-color: #C0C0C0" readonly="readonly" /><br />
+<br />
+<input type="button" name="CalcTestDur" value="Calculate" onclick="dtr_CalcTestDuration()" /><br /><br />
+
+<i class="infopoint">&rarr; With this we also have one half of our “(a) Developer : <b>(b) Tester”</b> ratio.</i>
+
+<hr />
+
+<!-- Show the final Dev:Test Ratio -->
+<input type="button" name="CalcFinalRatio" value="Run Summary" onclick="dtr_SummaryCalcs()" /><br /><br />
+
+<input type="text" name="dtr_SumDur" value="Total Time" style="background-color: #C0C0C0" readonly="readonly" /> &nbsp;
+<input type="text" name="dtr_FinalRatio" value="Test Duration" style="background-color: #C0C0C0" readonly="readonly" /><br />
+
+</form>
+
+</body>
+</html>
