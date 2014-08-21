@@ -1,0 +1,36 @@
+Last update 11-Aug-14
+~~~~~~~~~~~~~~~~~~~~~
+
+1) git clone <repo url>
+------------------------
+Clone the online repository, using the URL as shwon on the Github project page
+!! Make sure you are in the directory where you want the repo to be cloned to!!
+
+
+2) git touch <new file name here>
+---------------------------------
+Create a new file for editing (or just use your IDE and then [git add ...]
+
+
+3) git add <file name here>
+----------------------------
+Add your new file to the repository on your local machine
+
+
+4) git commit -m "add some comment about the file being committed"
+-------------------------------------------------------------------
+Commit a file for publishing to the online master repository, with a message
+
+
+5) git push
+------------
+Push everything you've commited for publishing to the online repository to that repository
+
+
+6) git status
+--------------
+Check the status of your local respository
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
