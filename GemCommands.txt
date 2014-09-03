@@ -1,0 +1,28 @@
+Ruby Gem Useful Commands
+
+1) gem install [name of gem]
+----------------------------
+Use to install the gem you need to use
+
+
+2) gem environment
+------------------
+Show information about the gems installation
+
+
+3) gem list [OPTIONS]
+-----------
+Provides a list of locally installed gems. If you add   --remote  you will get a full LONG list of remote gems.
+
+
+4) gem check [OPTIONS] [GEMNAME ...] [options] 
+----------------------------------------------
+Use to check the integrity of the gem and any missing files
+
+
+5) gem outdated
+Gives a list of gems that have updated versions, shows the current and new version available
+
+
+6) gem update REGEXP [REGEXP ...] [options]
+-------------------------------------------
