@@ -28,6 +28,7 @@ Commit a file for publishing to the online master repository, with a message
 Push everything you've commited for publishing to the online repository to that repository
 You should be prompted for your user name and password
 
+
 6) git status
 --------------
 Check the status of your local respository
