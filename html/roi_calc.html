@@ -1,0 +1,66 @@
+<!--
+Simple example showing the use of forms and JavaScript to calculate and display results.
+form, getElementByID, innerHMTL, input(s), button(s), onclick, function, concatenation, 
+-->
+
+<html>
+	
+<head>
+	<title>Benefits Calculator</title>
+</head>
+	
+<body>
+
+<!-- Get the numbers we need to calculate -->
+	<p><h1>ROI Calculator</h1></p>
+
+<hr />
+
+<!-- This is the HTML form that has the text fields and buttons -->
+<form name="workItOut">
+	<p><b>Please enter details (as numbers) in the fields below</b></p>
+	
+	<p>How many test cases?<br />
+	<input type="text" id="testcases"/></p>
+	
+	<p>How many test runs per year?<br />
+	<input type="text" id="testruns"/></p>
+
+	<p>Duration of test runs (d)?<br />
+	<input type="text" id="duration"/></p>
+
+	<p>How many staff per run?<br />
+	<input type="text" id="staff"/></p>
+
+	<input type="button" onclick="calculate()" value="Calculate the ROI">
+	<button type="reset" onclick="document.getElementById('result').innerHTML = '[Result not calculated]'">Clear the form</button>
+
+</form>
+
+<!----------------------------------------------------------------------------------------->
+<!-- Here's some JavaScript to Calculate the results -->
+<script>
+	function calculate() {
+		var testcases = parseFloat(document.workItOut.testcases.value);
+		var testruns = parseFloat(document.getElementById("testruns").value);
+		var duration = parseFloat(document.getElementById("duration").value);
+		var staff = parseFloat(document.getElementById("staff").value);
+		
+		var calculation = (testcases * testruns * duration * staff);
+		
+		var resultString = "Total maximum days saving is: " + calculation;
+		var resultCost = "Maximum potential saving from automation = &euro;" + (calculation * 200);
+		
+		document.getElementById("result").innerHTML = resultString + "<br />" + resultCost;
+					
+	};
+
+</script>
+
+<hr />
+
+<p id="result">[Result not calculated]</p>
+
+</body>	
+	
+</html>
