@@ -1,0 +1,66 @@
+<!--
+Simple example showing the use of forms and JavaScript to calculate and display results.
+form, getElementByID, innerHMTL, input(s), button(s), onclick, function, concatenation, 
+-->
+
+<html>
+	
+<head>
+	<title>Arrays Slice Checker</title>
+</head>
+	
+<body>
+
+<!-- Get the numbers we need to calculate -->
+	<p><h1>Slice Checker</h1></p>
+
+<hr />
+
+<!-- This is the HTML form that has the text fields and buttons -->
+<form name="sliceChecker">
+	<p><b>Click the button below to see the effects of slicing an Array</b></p>
+
+	  <p>   var array = ["peanut", "butter", "and", "jelly"];<br />
+
+		    var a = array.slice(0, 1);<br />
+		    var b = array.slice(0, 2);<br />
+		    var c = array.slice(2, 2);<br />
+		    var d = array.slice(2, 20);<br />
+		    var e = array.slice(3, 0);<br />
+		    var f = array.slice(3, 100);<br />
+		    var g = array.slice(5, 1);
+		</p>
+
+
+	<input type="button" onclick="calculate()" value="Check var a">
+	<button type="reset" onclick="document.getElementById('result').innerHTML = '[Result not calculated]'">Clear the form</button>
+
+</form>
+
+<!----------------------------------------------------------------------------------------->
+<!-- Here's some JavaScript to Calculate the results -->
+<script>
+	function calculate() {
+
+	    var array = ["peanut", "butter", "and", "jelly"];
+	
+	    var a = array.slice(0, 1);
+	    var b = array.slice(0, 2);
+	    var c = array.slice(2, 2);
+	    var d = array.slice(2, 20);
+	    var e = array.slice(3, 0);
+	    var f = array.slice(3, 100);
+	    var g = array.slice();
+	
+		document.getElementById("result").innerHTML = "Var a = " + a + "<br/> Var b = " + b + "<br/> Var c = " + c + "<br/> Var d = " + d + "<br/> Var e = " + e + "<br/> Var f = " + f + "<br/> Var g = " + g + "<br/>";			
+	};
+
+</script>
+
+<hr />
+
+<p id="result">[Result not calculated]</p>
+
+</body>	
+	
+</html>
