@@ -12,6 +12,10 @@ Clone the online repository, using the URL as shwon on the Github project page
 Create a new file for editing (or just use your IDE and then [git add ...]
 
 
+########################
+
+For updates you need to do the following:
+
 3) git add <file name here>
 ----------------------------
 Add your new file to the repository on your local machine
